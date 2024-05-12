@@ -1,0 +1,51 @@
+_format_version: "2.1"
+
+services: 
+  - name: user-login
+    url: http://user:5000/users/login
+    routes:
+      - name: user-route
+        paths: 
+          - /user/login
+
+  - name: reserveRoom
+    url: http://business:7777/WanderRooms/reserveRoom
+    routes:
+      - name: business-reserve
+        paths: 
+          - /WanderStay/reserve
+
+  - name: getRooms
+    url: http://business:7777/WanderRooms/showRoomsInfo
+    routes:
+      - name: business-getRooms
+        paths: 
+          - /WanderStay/getRooms
+
+  - name: cancelRoom
+    url: http://business:7777/WanderRooms/cancelReservation
+    routes:
+      - name: business-cancelReservation
+        paths: 
+          - /WanderStay/cancelReservation
+
+  - name: updateReservation
+    url: http://business:7777/WanderRooms/updateReservation
+    routes:
+      - name: business-updateReservation
+        paths: 
+          - /WanderStay/updateReservation
+  
+  - name: historyCheck
+    url: http://business:7777/WanderRooms/historyCheck
+    routes:
+      - name: business-historyCheck
+        paths: 
+          - /WanderStay/historyCheck
+
+  - name: pg-admin
+    url: http://pg-admin:5050/
+    routes:
+      - name: pg-admin
+        paths:
+          - /pgadmin/browser
