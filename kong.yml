@@ -44,7 +44,7 @@ services:
           - /WanderStay/historyCheck
 
   - name: pg-admin
-    url: http://pg-admin:5050/
+    url: http://pgadmin:80/login?next=/
     routes:
       - name: pg-admin
         paths:
